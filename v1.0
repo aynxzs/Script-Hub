@@ -1,0 +1,59 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Aynxzs Hub", "Synapse")
+local Tab = Window:NewTab("Home")
+local Section = Tab:NewSection("Owners")
+Section:NewButton("aynxzs#3661", "aynxzs#3661", function()
+    print("Clicked")
+end)
+local Section = Tab:NewSection("Ui creator")
+Section:NewButton("aynxzs#3661", "aynxzs#3661", function()
+    print("Clicked")
+end)
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Player Option")
+Section:NewSlider("WalkSpeed", "Walkspeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+local Tab = Window:NewTab("Script Hubs")
+local Section = Tab:NewSection("Hubs")
+Section:NewButton("Phantom Forces", "Phantom Forces", function()
+loadstring(game:HttpGet("https://projectevo.xyz/script/loader.lua"))()
+    print("Clicked")
+end)
+Section:NewButton("Arsenal", "Arsenal", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GwnStefano/NexusHub/main/Main", true))()
+    print("Clicked")
+end)
+Section:NewButton("da Hood", "da hood", function()
+local old = game:GetService("Players").LocalPlayer.IsInGroup
+
+hookfunction(game:GetService("Players").LocalPlayer.IsInGroup, newcclosure(function(self, id)
+if id == 12271076 then
+return true
+end
+return old(self, id)
+end))
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SpaceYes/Lua/Main/DaHood.Lua'))()
+    print("Clicked")
+end)
+Section:NewButton("Recoil Zombies", "Recoil Zombies", function()
+_G.RedGUI = false
+_G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
+--Themes: Light, Dark, Mocha, Aqua and Jester
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/RecoilZombies.lua"))()
+    print("Clicked")
+end)
+local Tab = Window:NewTab("Admin Scripts")
+local Section = Tab:NewSection("Admin")
+Section:NewButton("Cmd-X", "Cmd-X", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+    print("Clicked")
+end)
+Section:NewButton("Inf Yield", "Inf Yield", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/tzTXmYf2'),true))()
+    print("Clicked")
+end)
